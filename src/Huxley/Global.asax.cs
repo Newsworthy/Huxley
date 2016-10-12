@@ -1,7 +1,7 @@
 ﻿/*
 Huxley - a JSON proxy for the UK National Rail Live Departure Board SOAP API
-Copyright (C) 2015 James Singleton
- * http://huxley.unop.uk
+Copyright (C) 2016 James Singleton
+ * https://huxley.unop.uk
  * https://github.com/jpsingleton/Huxley
 
 This program is free software: you can redistribute it and/or modify
@@ -57,7 +57,7 @@ namespace Huxley {
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
             // Load settings
-            dynamic config = new Configuration();
+            var config = new Configuration();
             Settings = config.Bind<HuxleySettings>();
 
             // Set the CRS dictionary passing in embedded CRS path
@@ -69,7 +69,7 @@ namespace Huxley {
                 new CrsRecord {CrsCode = "BFR", StationName = "London Blackfriars",},
                 new CrsRecord {CrsCode = "CST", StationName = "London Cannon Street",},
                 new CrsRecord {CrsCode = "CHX", StationName = "London Charing Cross",},
-                new CrsRecord {CrsCode = "CTX", StationName = "City Thameslink",},
+                new CrsRecord {CrsCode = "CTK", StationName = "City Thameslink",},
                 new CrsRecord {CrsCode = "EUS", StationName = "London Euston",},
                 new CrsRecord {CrsCode = "FST", StationName = "London Fenchurch Street",},
                 new CrsRecord {CrsCode = "KGX", StationName = "London Kings Cross",},
